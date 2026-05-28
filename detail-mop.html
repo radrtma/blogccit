@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOP - Mobile Programming | Academic Blog</title>
+    <meta name="description" content="Pemahaman mendalam mengenai siklus hidup aplikasi mobile, teknik widget, reactive programming, dan UI layout native/lintas platform.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div class="menu">
+        <div class="menu-container">
+            <a href="index.html" class="logo">ACADEMIC BLOG</a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span><span></span><span></span>
+            </label>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- MAIN BODY -->
+    <div class="content-wrapper">
+        <div class="dashboard-container">
+
+            <!-- Back Link -->
+            <div style="margin-top: 20px;">
+                <a href="index.html" class="back-link">
+                    <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+                </a>
+            </div>
+
+            <!-- Post Hero -->
+            <div class="post-hero">
+                <span class="post-tag">MOP-FSD-24 &bull; Semester 4</span>
+                <h1>Mobile Programming</h1>
+                <div class="post-author-box">
+                    <div class="author-avatar" style="background: linear-gradient(135deg, #16a085, #2ecc71);">
+                        <i class="fa-solid fa-mobile-screen-button" style="font-size:1.1rem;"></i>
+                    </div>
+                    <div class="author-meta">
+                        <span class="author-name">Tim Pengembang</span>
+                        <span class="post-date">Semester 4 &mdash; 2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Banner -->
+            <div class="post-main-img">
+                <div style="width:100%;height:320px;background:linear-gradient(135deg,#16a085 0%,#2ecc71 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;color:white;gap:16px;">
+                    <i class="fa-solid fa-mobile-screen-button" style="font-size:5rem;opacity:0.9;"></i>
+                    <h2 style="font-weight:800;font-size:1.8rem;letter-spacing:-1px;text-transform:uppercase;">Flutter &mdash; Cross-Platform Mobile</h2>
+                </div>
+            </div>
+
+            <!-- Post Content -->
+            <div class="post-body">
+                <p>Mata kuliah <strong>Mobile Programming (MOP)</strong> memperkenalkan kami pada dunia pengembangan aplikasi perangkat mobile modern. Framework utama yang digunakan adalah <strong>Flutter</strong> — framework cross-platform buatan Google yang menggunakan bahasa pemrograman <strong>Dart</strong>. Flutter memungkinkan pengembangan satu codebase yang dapat dikompilasi menjadi aplikasi native berkualitas tinggi untuk Android dan iOS.</p>
+
+                <h2>1. Bahasa Dart dan Paradigma OOP</h2>
+                <p>Sebelum masuk ke Flutter, kami mempelajari bahasa <strong>Dart</strong> sebagai fondasinya. Dart adalah bahasa yang strongly-typed, mendukung pemrograman asinkron dengan <code>async/await</code>, dan berorientasi objek penuh. Konsep-konsep yang kami pelajari meliputi:</p>
+                <ul>
+                    <li><strong>Null Safety</strong>: Fitur utama Dart modern yang mencegah <em>null reference errors</em> pada saat kompilasi.</li>
+                    <li><strong>Class & Inheritance</strong>: Mendefinisikan model data dan komponen UI menggunakan prinsip OOP.</li>
+                    <li><strong>Futures & Streams</strong>: Menangani operasi asinkron seperti pemanggilan API dan pembacaan data real-time.</li>
+                </ul>
+
+                <h2>2. Widget Tree dan Reactive UI</h2>
+                <p>Inti dari Flutter adalah konsep <strong>Widget Tree</strong>. Semua yang tampil di layar adalah widget — dari tombol, teks, hingga layout kompleks. Kami mempelajari dua jenis widget utama:</p>
+                <ul>
+                    <li><strong>StatelessWidget</strong>: Widget yang bersifat immutable (tidak berubah). Digunakan untuk komponen UI yang tampilannya tidak bergantung pada perubahan data, seperti label statis atau ikon.</li>
+                    <li><strong>StatefulWidget</strong>: Widget yang memiliki state internal yang dapat berubah. Ketika state berubah (melalui <code>setState()</code>), Flutter secara otomatis merender ulang bagian UI yang terpengaruh secara efisien.</li>
+                </ul>
+
+                <h2>3. Layout System Flutter</h2>
+                <p>Flutter menggunakan sistem layout berbasis constraint yang kuat dan fleksibel. Kami menguasai berbagai widget layout esensial:</p>
+                <ul>
+                    <li><strong>Row & Column</strong>: Menata widget secara horizontal dan vertikal.</li>
+                    <li><strong>Stack</strong>: Menumpuk widget di atas satu sama lain, berguna untuk overlay dan efek visual.</li>
+                    <li><strong>ListView & GridView</strong>: Menampilkan daftar data yang panjang dengan scrolling yang efisien.</li>
+                    <li><strong>Expanded & Flexible</strong>: Membagi ruang yang tersedia secara proporsional di antara beberapa widget dalam Row atau Column.</li>
+                </ul>
+
+                <h2>4. Navigasi dan Routing</h2>
+                <p>Dalam aplikasi multi-halaman, manajemen navigasi sangat penting. Kami mempelajari:</p>
+                <ul>
+                    <li><strong>Navigator 2.0</strong> dan package <strong>GoRouter</strong> untuk routing deklaratif yang lebih modern dan mudah dikelola.</li>
+                    <li>Pengiriman data antar halaman melalui <strong>route arguments</strong>.</li>
+                    <li>Implementasi <strong>Bottom Navigation Bar</strong> dan <strong>Drawer</strong> sebagai pola navigasi utama yang familiar bagi pengguna mobile.</li>
+                </ul>
+
+                <h2>5. Penanganan Sensor dan Platform Channel</h2>
+                <p>Kami juga diperkenalkan pada kemampuan Flutter dalam mengakses fitur hardware perangkat melalui <strong>Platform Channel</strong>, seperti kamera, GPS, dan akselerometer, menggunakan package populer seperti <code>camera</code>, <code>geolocator</code>, dan <code>sensors_plus</code>.</p>
+
+                <p>Mata kuliah Mobile Programming ini membuka perspektif baru dalam pengembangan perangkat lunak, di mana kami tidak hanya berfokus pada web, tetapi juga mampu merancang pengalaman pengguna yang intuitif dan berkualitas tinggi di platform mobile.</p>
+            </div>
+
+            <!-- Back Button -->
+            <div class="back-nav">
+                <a href="index.html" class="btn-secondary">
+                    <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div style="max-width: var(--max-w); margin: 0 auto;">
+            <p>&copy; 2026 <strong style="color: var(--text-main);">ACADEMIC BLOG</strong>. Dibuat oleh Boazoma, Rifqi, Raffi &amp; Ridhwan.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

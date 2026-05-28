@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQA - Software Quality Assurance | Academic Blog</title>
+    <meta name="description" content="Mempelajari standar penjaminan kualitas perangkat lunak, skenario pengujian manual/otomatis, dan pelaporan bug audit.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div class="menu">
+        <div class="menu-container">
+            <a href="index.html" class="logo">ACADEMIC BLOG</a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span><span></span><span></span>
+            </label>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- MAIN BODY -->
+    <div class="content-wrapper">
+        <div class="dashboard-container">
+
+            <!-- Back Link -->
+            <div style="margin-top: 20px;">
+                <a href="index.html" class="back-link">
+                    <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+                </a>
+            </div>
+
+            <!-- Post Hero -->
+            <div class="post-hero">
+                <span class="post-tag">SQA-FSD-24 &bull; Semester 4</span>
+                <h1>Software Quality Assurance &amp; Project</h1>
+                <div class="post-author-box">
+                    <div class="author-avatar" style="background: linear-gradient(135deg, #d35400, #e67e22);">
+                        <i class="fa-solid fa-clipboard-check" style="font-size:1.1rem;"></i>
+                    </div>
+                    <div class="author-meta">
+                        <span class="author-name">Tim Pengembang</span>
+                        <span class="post-date">Semester 4 &mdash; 2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Banner -->
+            <div class="post-main-img">
+                <div style="width:100%;height:320px;background:linear-gradient(135deg,#d35400 0%,#e67e22 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;color:white;gap:16px;">
+                    <i class="fa-solid fa-clipboard-check" style="font-size:5rem;opacity:0.9;"></i>
+                    <h2 style="font-weight:800;font-size:1.8rem;letter-spacing:-1px;text-transform:uppercase;">Testing &mdash; Quality Assurance</h2>
+                </div>
+            </div>
+
+            <!-- Post Content -->
+            <div class="post-body">
+                <p>Mata kuliah <strong>Software Quality Assurance (SQA)</strong> mengajarkan kami bahwa menulis kode yang berfungsi baru setengah dari pekerjaan — memastikan kode tersebut <em>benar, andal, dan memenuhi standar kualitas</em> adalah tanggung jawab yang sama pentingnya. SQA adalah disiplin ilmu yang memastikan proses pengembangan perangkat lunak dilakukan secara sistematis dan terstandarisasi.</p>
+
+                <h2>1. Konsep Dasar Quality Assurance vs Quality Control</h2>
+                <p>Pemahaman pertama yang kami bangun adalah perbedaan mendasar antara dua pendekatan jaminan kualitas:</p>
+                <ul>
+                    <li><strong>Quality Assurance (QA)</strong>: Bersifat <em>proaktif</em>. Fokus pada perbaikan <em>proses</em> pengembangan itu sendiri untuk mencegah defect terjadi sejak awal. Contoh: code review wajib, standar penulisan kode, dan checklist sebelum deployment.</li>
+                    <li><strong>Quality Control (QC)</strong>: Bersifat <em>reaktif</em>. Fokus pada pengujian <em>produk akhir</em> untuk mendeteksi dan memperbaiki defect yang telah terjadi. Contoh: pengujian manual, regression testing.</li>
+                </ul>
+
+                <h2>2. Jenis-Jenis Pengujian Perangkat Lunak</h2>
+                <p>Kami mempelajari piramida testing yang komprehensif, dari unit terkecil hingga sistem secara keseluruhan:</p>
+                <ul>
+                    <li><strong>Unit Testing</strong>: Menguji fungsi atau method individual secara terisolasi untuk memastikan setiap unit logika bekerja sesuai spesifikasi.</li>
+                    <li><strong>Integration Testing</strong>: Menguji interaksi antar modul atau komponen — misalnya, apakah Controller benar-benar memanggil Model dengan parameter yang tepat dan menghasilkan respons yang diharapkan.</li>
+                    <li><strong>System Testing</strong>: Menguji sistem secara keseluruhan sebagai satu kesatuan untuk memverifikasi bahwa semua persyaratan fungsional terpenuhi.</li>
+                    <li><strong>User Acceptance Testing (UAT)</strong>: Pengujian akhir yang dilakukan oleh pengguna nyata untuk memvalidasi bahwa sistem memenuhi kebutuhan bisnis mereka.</li>
+                    <li><strong>Regression Testing</strong>: Menjalankan kembali seluruh suite pengujian setelah ada perubahan kode untuk memastikan tidak ada fitur yang sebelumnya berfungsi menjadi rusak.</li>
+                </ul>
+
+                <h2>3. Pengujian Manual: Skenario & Test Case</h2>
+                <p>Kami belajar menyusun dokumentasi pengujian manual yang terstruktur. Setiap <strong>Test Case</strong> harus memuat:</p>
+                <ul>
+                    <li><strong>Test Case ID</strong>: Identifikasi unik untuk setiap skenario pengujian.</li>
+                    <li><strong>Preconditions</strong>: Kondisi awal yang harus terpenuhi sebelum pengujian dimulai.</li>
+                    <li><strong>Steps to Reproduce</strong>: Langkah-langkah tepat dan berurutan untuk mereproduksi skenario.</li>
+                    <li><strong>Expected Result</strong>: Hasil yang diharapkan jika sistem berfungsi dengan benar.</li>
+                    <li><strong>Actual Result</strong>: Hasil nyata yang diperoleh saat pengujian dijalankan.</li>
+                    <li><strong>Status</strong>: PASS atau FAIL berdasarkan perbandingan expected vs actual result.</li>
+                </ul>
+
+                <h2>4. Automated Testing</h2>
+                <p>Pengujian manual tidak efisien untuk diulang setiap kali ada perubahan kode. Kami diperkenalkan pada konsep <strong>automated testing</strong> menggunakan tools seperti:</p>
+                <ul>
+                    <li><strong>PHPUnit</strong>: Framework pengujian unit yang terintegrasi dengan CodeIgniter 4 untuk menguji logika backend secara otomatis.</li>
+                    <li><strong>Selenium / Playwright</strong>: Tools untuk <em>end-to-end testing</em> yang mensimulasikan interaksi pengguna nyata di browser secara otomatis.</li>
+                    <li><strong>Postman / Newman</strong>: Menguji endpoint REST API secara otomatis dan memastikan setiap respons API sesuai kontrak yang didefinisikan.</li>
+                </ul>
+
+                <h2>5. Bug Reporting dan Pelacakan Defect</h2>
+                <p>Ketika defect ditemukan, cara melaporkannya secara efektif sama pentingnya dengan menemukannya. Kami mempelajari cara menulis bug report yang baik menggunakan platform manajemen isu seperti <strong>GitHub Issues</strong> dan <strong>Jira</strong>, dengan memastikan setiap laporan mencantumkan langkah reproduksi yang jelas, tingkat keparahan (Severity), dan prioritas penanganan (Priority).</p>
+
+                <p>Mata kuliah SQA mengubah cara pandang kami terhadap pengembangan perangkat lunak — kualitas bukan sesuatu yang diperiksa di akhir, melainkan sesuatu yang dibangun sejak awal di setiap tahap pengembangan.</p>
+            </div>
+
+            <!-- Back Button -->
+            <div class="back-nav">
+                <a href="index.html" class="btn-secondary">
+                    <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div style="max-width: var(--max-w); margin: 0 auto;">
+            <p>&copy; 2026 <strong style="color: var(--text-main);">ACADEMIC BLOG</strong>. Dibuat oleh Boazoma, Rifqi, Raffi &amp; Ridhwan.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

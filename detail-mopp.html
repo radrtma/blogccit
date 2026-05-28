@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOP/P - Mobile Programming Project | Academic Blog</title>
+    <meta name="description" content="Proyek kolaboratif pembuatan aplikasi mobile interaktif terintegrasi REST API backend, penyimpanan lokal, serta optimalisasi performa.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div class="menu">
+        <div class="menu-container">
+            <a href="index.html" class="logo">ACADEMIC BLOG</a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span><span></span><span></span>
+            </label>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- MAIN BODY -->
+    <div class="content-wrapper">
+        <div class="dashboard-container">
+
+            <!-- Back Link -->
+            <div style="margin-top: 20px;">
+                <a href="index.html" class="back-link">
+                    <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+                </a>
+            </div>
+
+            <!-- Post Hero -->
+            <div class="post-hero">
+                <span class="post-tag">MOP/P-FSD-24 &bull; Semester 4</span>
+                <h1>Mobile Programming — Project</h1>
+                <div class="post-author-box">
+                    <div class="author-avatar" style="background: linear-gradient(135deg, #8e44ad, #9b59b6);">
+                        <i class="fa-solid fa-code-branch" style="font-size:1.1rem;"></i>
+                    </div>
+                    <div class="author-meta">
+                        <span class="author-name">Tim Pengembang</span>
+                        <span class="post-date">Semester 4 &mdash; 2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Banner -->
+            <div class="post-main-img">
+                <div style="width:100%;height:320px;background:linear-gradient(135deg,#8e44ad 0%,#9b59b6 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;color:white;gap:16px;">
+                    <i class="fa-solid fa-code-branch" style="font-size:5rem;opacity:0.9;"></i>
+                    <h2 style="font-weight:800;font-size:1.8rem;letter-spacing:-1px;text-transform:uppercase;">Flutter App &mdash; REST API Integration</h2>
+                </div>
+            </div>
+
+            <!-- Post Content -->
+            <div class="post-body">
+                <p>Mata kuliah <strong>Mobile Programming — Project (MOP/P)</strong> adalah puncak dari pembelajaran Mobile Programming, di mana seluruh konsep Flutter yang telah dipelajari diimplementasikan dalam sebuah proyek aplikasi mobile yang utuh dan fungsional. Kami membangun sebuah <strong>aplikasi mobile Flutter</strong> yang terhubung secara penuh dengan backend REST API.</p>
+
+                <h2>1. Arsitektur Aplikasi: State Management dengan Provider</h2>
+                <p>Untuk mengelola state aplikasi yang kompleks secara efisien, kami mengadopsi pola arsitektur <strong>MVVM (Model-View-ViewModel)</strong> dengan menggunakan package <strong>Provider</strong> sebagai solusi state management:</p>
+                <ul>
+                    <li><strong>ChangeNotifier</strong>: Kelas yang menyimpan state bisnis dan memberitahu listener ketika data berubah.</li>
+                    <li><strong>Consumer Widget</strong>: Widget yang mendengarkan perubahan dari ChangeNotifier dan merender ulang UI secara otomatis dan efisien.</li>
+                    <li><strong>MultiProvider</strong>: Menyediakan banyak state sekaligus ke seluruh pohon widget aplikasi dari titik teratas.</li>
+                </ul>
+
+                <h2>2. Integrasi REST API</h2>
+                <p>Aplikasi yang kami bangun mengonsumsi data dari sebuah REST API backend. Kami menggunakan package <strong>http</strong> dan <strong>Dio</strong> untuk menangani komunikasi jaringan:</p>
+                <ul>
+                    <li><strong>HTTP GET</strong>: Mengambil daftar data dari server dan menampilkannya dalam <code>ListView</code>.</li>
+                    <li><strong>HTTP POST/PUT</strong>: Mengirim data form (pendaftaran, login, buat konten baru) ke server menggunakan body JSON.</li>
+                    <li><strong>JWT Token Authentication</strong>: Menyimpan token autentikasi secara lokal menggunakan <strong>SharedPreferences</strong> dan mengirimkannya di setiap request yang membutuhkan autorisasi melalui HTTP header.</li>
+                    <li><strong>Error Handling</strong>: Menampilkan pesan error yang ramah pengguna ketika jaringan tidak tersedia atau server mengembalikan kode error (4xx, 5xx).</li>
+                </ul>
+
+                <h2>3. Penyimpanan Lokal</h2>
+                <p>Kami mengimplementasikan dua mekanisme penyimpanan lokal yang berbeda sesuai kebutuhan:</p>
+                <ul>
+                    <li><strong>SharedPreferences</strong>: Untuk menyimpan data sederhana berpasangan kunci-nilai seperti token login, preferensi tema, dan data profil pengguna yang di-cache.</li>
+                    <li><strong>SQLite (via package sqflite)</strong>: Untuk menyimpan data terstruktur secara lokal, memungkinkan fitur <em>offline-first</em> di mana pengguna tetap dapat melihat konten meski tanpa koneksi internet.</li>
+                </ul>
+
+                <h2>4. UI/UX Berkualitas Tinggi</h2>
+                <p>Di luar fungsionalitas, kami juga memperhatikan aspek tampilan dan pengalaman pengguna:</p>
+                <ul>
+                    <li><strong>Skeleton Loading</strong>: Menampilkan placeholder animasi saat data sedang dimuat dari API, menggantikan loading spinner yang membosankan.</li>
+                    <li><strong>Pull-to-Refresh</strong>: Memungkinkan pengguna memperbarui data dengan gestur tarik ke bawah yang sudah akrab.</li>
+                    <li><strong>Hero Animation</strong>: Animasi transisi halus antar halaman menggunakan widget <code>Hero</code> untuk elemen seperti gambar dan ikon yang berpindah layar.</li>
+                    <li><strong>Responsive Layout</strong>: Memastikan tampilan aplikasi tetap proporsional di berbagai ukuran layar menggunakan <code>LayoutBuilder</code> dan <code>MediaQuery</code>.</li>
+                </ul>
+
+                <h2>5. Testing dan Optimalisasi Performa</h2>
+                <p>Sebelum aplikasi diserahkan, kami melakukan serangkaian pengujian dan optimasi:</p>
+                <ul>
+                    <li><strong>Widget Testing</strong>: Menulis unit test untuk komponen-komponen UI kritis menggunakan package <code>flutter_test</code>.</li>
+                    <li><strong>Performance Profiling</strong>: Menggunakan Flutter DevTools untuk mengidentifikasi dan memperbaiki <em>jank</em> (frame drop) pada animasi dan scroll.</li>
+                    <li><strong>Release Build</strong>: Mengompilasi aplikasi ke mode release untuk mengukur performa nyata di perangkat fisik.</li>
+                </ul>
+
+                <p>Proyek MOP/P ini adalah salah satu pencapaian teknis paling kompleks yang kami kerjakan di Semester 4. Mengintegrasikan frontend mobile, state management, REST API, dan penyimpanan lokal dalam satu aplikasi yang kohesif merupakan pengalaman belajar yang luar biasa berharga.</p>
+            </div>
+
+            <!-- Back Button -->
+            <div class="back-nav">
+                <a href="index.html" class="btn-secondary">
+                    <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div style="max-width: var(--max-w); margin: 0 auto;">
+            <p>&copy; 2026 <strong style="color: var(--text-main);">ACADEMIC BLOG</strong>. Dibuat oleh Boazoma, Rifqi, Raffi &amp; Ridhwan.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

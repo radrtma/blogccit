@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIS/P - Enterprise IS Framework Project | Academic Blog</title>
+    <meta name="description" content="Proyek kolaboratif pengembangan sistem informasi enterprise penuh menggunakan CodeIgniter 4 dengan git dan deployment.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div class="menu">
+        <div class="menu-container">
+            <a href="index.html" class="logo">ACADEMIC BLOG</a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span><span></span><span></span>
+            </label>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- MAIN BODY -->
+    <div class="content-wrapper">
+        <div class="dashboard-container">
+
+            <!-- Back Link -->
+            <div style="margin-top: 20px;">
+                <a href="index.html" class="back-link">
+                    <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+                </a>
+            </div>
+
+            <!-- Post Hero -->
+            <div class="post-hero">
+                <span class="post-tag">DIS/P-FSD-24 &bull; Semester 4</span>
+                <h1>Developing Enterprise Information System using Framework — Project</h1>
+                <div class="post-author-box">
+                    <div class="author-avatar" style="background: linear-gradient(135deg, #2c3e50, #3498db);">
+                        <i class="fa-solid fa-laptop-code" style="font-size:1.1rem;"></i>
+                    </div>
+                    <div class="author-meta">
+                        <span class="author-name">Tim Pengembang</span>
+                        <span class="post-date">Semester 4 &mdash; 2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Banner -->
+            <div class="post-main-img">
+                <div style="width:100%;height:320px;background:linear-gradient(135deg,#2c3e50 0%,#3498db 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;color:white;gap:16px;">
+                    <i class="fa-solid fa-laptop-code" style="font-size:5rem;opacity:0.9;"></i>
+                    <h2 style="font-weight:800;font-size:1.8rem;letter-spacing:-1px;text-transform:uppercase;">Full-Stack Project &mdash; CI4 Social Blog</h2>
+                </div>
+            </div>
+
+            <!-- Post Content -->
+            <div class="post-body">
+                <p>Mata kuliah <strong>Developing Enterprise Information System using Framework — Project (DIS/P)</strong> adalah kelanjutan langsung dari mata kuliah DIS. Di sini, kami menerapkan seluruh teori yang telah dipelajari ke dalam sebuah proyek nyata, kolaboratif, dan berskala penuh: sebuah <strong>platform blog sosial berbasis web</strong> yang dikembangkan dari nol menggunakan CodeIgniter 4.</p>
+
+                <h2>1. Proyek: CI4 Social Blog</h2>
+                <p>Proyek yang dikerjakan adalah <strong>CI4 Social Blog</strong> — sebuah platform blog dengan fitur-fitur lengkap layaknya aplikasi web nyata, meliputi:</p>
+                <ul>
+                    <li>Sistem registrasi dan autentikasi pengguna berbasis session yang aman.</li>
+                    <li>Halaman dashboard untuk membuat, mengedit, dan menghapus postingan blog.</li>
+                    <li>Sistem komentar interaktif pada setiap postingan.</li>
+                    <li>Fitur upload gambar untuk thumbnail postingan dengan validasi tipe dan ukuran file.</li>
+                    <li>Halaman profil pengguna dengan kemampuan mengubah data dan foto profil.</li>
+                    <li>Fitur pencarian postingan secara real-time.</li>
+                </ul>
+
+                <h2>2. Manajemen Kolaborasi dengan Git</h2>
+                <p>Proyek ini dikerjakan secara tim oleh empat orang. Untuk menghindari konflik kode, kami menerapkan alur kerja Git yang terstruktur:</p>
+                <ul>
+                    <li><strong>Feature Branching</strong>: Setiap fitur dikembangkan di branch terpisah (misalnya <code>feature/auth</code>, <code>feature/comment</code>) sebelum di-merge ke branch utama.</li>
+                    <li><strong>Pull Request & Code Review</strong>: Setiap perubahan harus melalui review dari minimal satu anggota tim lain sebelum dapat di-merge.</li>
+                    <li><strong>Commit Convention</strong>: Menggunakan konvensi pesan commit yang jelas seperti <code>feat:</code>, <code>fix:</code>, <code>refactor:</code> untuk keterbacaan riwayat proyek.</li>
+                </ul>
+
+                <h2>3. Struktur Direktori & Clean Architecture</h2>
+                <p>Kami menerapkan prinsip-prinsip clean architecture dalam menyusun struktur proyek CI4:</p>
+                <ul>
+                    <li>Memisahkan logika bisnis ke dalam <strong>Service Layer</strong> yang dipanggil oleh Controller, agar Controller tetap tipis dan mudah diuji.</li>
+                    <li>Menggunakan <strong>Helper functions</strong> CI4 untuk utilitas umum seperti format tanggal dan manipulasi string.</li>
+                    <li>Mengelola konfigurasi sensitif (database credentials, base URL) melalui file <code>.env</code> yang tidak dikontrol versi (ditambahkan ke <code>.gitignore</code>).</li>
+                </ul>
+
+                <h2>4. Validasi Form & Keamanan</h2>
+                <p>Keamanan adalah aspek krusial dalam proyek enterprise. Kami mengimplementasikan:</p>
+                <ul>
+                    <li><strong>Server-side Validation</strong> menggunakan Validation Library bawaan CI4 untuk memvalidasi setiap input pengguna sebelum diproses.</li>
+                    <li><strong>CSRF Protection</strong> pada setiap form POST untuk mencegah serangan Cross-Site Request Forgery.</li>
+                    <li><strong>Password Hashing</strong> menggunakan fungsi <code>password_hash()</code> PHP dengan algoritma BCRYPT sebelum menyimpan ke database.</li>
+                    <li><strong>XSS Filtering</strong> pada output data yang bersumber dari input pengguna.</li>
+                </ul>
+
+                <h2>5. Deployment ke Hosting</h2>
+                <p>Sebagai bagian dari pengalaman nyata, kami mempelajari cara men-deploy aplikasi CI4 ke server hosting shared. Langkah-langkah yang kami pelajari meliputi konfigurasi <code>.htaccess</code>, pengaturan base URL untuk lingkungan produksi, dan manajemen file <code>.env</code> yang berbeda antara development dan production.</p>
+
+                <p>Proyek DIS/P ini menjadi bukti nyata kemampuan kami bekerja dalam tim untuk menghasilkan sebuah produk perangkat lunak yang fungsional, aman, dan siap digunakan. Pengalaman ini sangat berharga sebagai persiapan memasuki dunia kerja profesional.</p>
+            </div>
+
+            <!-- Back Button -->
+            <div class="back-nav">
+                <a href="index.html" class="btn-secondary">
+                    <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div style="max-width: var(--max-w); margin: 0 auto;">
+            <p>&copy; 2026 <strong style="color: var(--text-main);">ACADEMIC BLOG</strong>. Dibuat oleh Boazoma, Rifqi, Raffi &amp; Ridhwan.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

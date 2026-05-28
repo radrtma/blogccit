@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIS - Developing Enterprise Information System | Academic Blog</title>
+    <meta name="description" content="Mempelajari konsep arsitektur MVC, routing, middleware, dan integrasi database enterprise menggunakan framework CodeIgniter 4.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div class="menu">
+        <div class="menu-container">
+            <a href="index.html" class="logo">ACADEMIC BLOG</a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span><span></span><span></span>
+            </label>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- MAIN BODY -->
+    <div class="content-wrapper">
+        <div class="dashboard-container">
+
+            <!-- Back Link -->
+            <div style="margin-top: 20px;">
+                <a href="index.html" class="back-link">
+                    <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+                </a>
+            </div>
+
+            <!-- Post Hero -->
+            <div class="post-hero">
+                <span class="post-tag">DIS-FSD-24 &bull; Semester 4</span>
+                <h1>Developing Enterprise Information System using Framework</h1>
+                <div class="post-author-box">
+                    <div class="author-avatar" style="background: linear-gradient(135deg, #1e1e1e, #444);">
+                        <i class="fa-solid fa-cubes" style="font-size:1.1rem;"></i>
+                    </div>
+                    <div class="author-meta">
+                        <span class="author-name">Tim Pengembang</span>
+                        <span class="post-date">Semester 4 &mdash; 2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Banner -->
+            <div class="post-main-img">
+                <div style="width:100%;height:320px;background:linear-gradient(135deg,#1e1e1e 0%,#444 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;color:white;gap:16px;">
+                    <i class="fa-solid fa-cubes" style="font-size:5rem;opacity:0.9;"></i>
+                    <h2 style="font-weight:800;font-size:1.8rem;letter-spacing:-1px;text-transform:uppercase;">CodeIgniter 4 &mdash; Enterprise Framework</h2>
+                </div>
+            </div>
+
+            <!-- Post Content -->
+            <div class="post-body">
+                <p>Mata kuliah <strong>Developing Enterprise Information System using Framework (DIS)</strong> merupakan salah satu mata kuliah inti di Semester 4 yang membekali mahasiswa dengan kemampuan membangun sistem informasi berskala enterprise menggunakan framework modern. Framework utama yang digunakan adalah <strong>CodeIgniter 4 (CI4)</strong>, sebuah PHP framework ringan berperforma tinggi dengan arsitektur MVC.</p>
+
+                <h2>1. Arsitektur MVC (Model-View-Controller)</h2>
+                <p>Konsep fundamental yang menjadi dasar dari seluruh pengembangan menggunakan CI4 adalah pola desain <strong>Model-View-Controller</strong>. Pola ini memisahkan tanggung jawab aplikasi menjadi tiga lapisan terpisah:</p>
+                <ul>
+                    <li><strong>Model</strong>: Menangani seluruh logika data dan komunikasi langsung dengan database MySQL menggunakan Query Builder CI4. Model bertanggung jawab atas validasi data sebelum disimpan.</li>
+                    <li><strong>View</strong>: Menghasilkan representasi visual (HTML) yang dikirim ke browser. CI4 mendukung pengelompokan view ke dalam folder partials untuk komponen yang dapat digunakan ulang seperti header, navbar, dan footer.</li>
+                    <li><strong>Controller</strong>: Jembatan antara Model dan View. Controller memproses HTTP request dari pengguna, memanggil method pada Model, lalu mengirimkan data ke View yang sesuai.</li>
+                </ul>
+
+                <h2>2. Routing dan RESTful Endpoints</h2>
+                <p>CI4 memiliki sistem routing yang sangat fleksibel melalui file <code>app/Config/Routes.php</code>. Kami mempelajari cara mendefinisikan:</p>
+                <ul>
+                    <li><strong>Resource Routes</strong> untuk CRUD otomatis dengan satu baris kode menggunakan <code>$routes->resource('posts')</code>.</li>
+                    <li><strong>Named Routes</strong> untuk mempermudah pembuatan URL secara dinamis di dalam View.</li>
+                    <li><strong>Route Grouping</strong> dengan middleware (Filters) untuk mengamankan grup rute tertentu, misalnya seluruh rute <code>/dashboard/*</code> yang membutuhkan autentikasi.</li>
+                </ul>
+
+                <h2>3. Database Migration & Seeding</h2>
+                <p>Mengelola skema database dalam tim yang beranggotakan empat orang secara manual seringkali menimbulkan konflik. Kami belajar mengatasi ini dengan:</p>
+                <ul>
+                    <li><strong>Database Migrations</strong>: Mendefinisikan struktur tabel (buat, ubah, hapus kolom) dalam file PHP yang dikontrol versi. Setiap anggota tim dapat mensinkronisasi skema database dengan satu perintah: <code>php spark migrate</code>.</li>
+                    <li><strong>Database Seeding</strong>: Mengisi tabel dengan data dummy awal secara otomatis melalui perintah <code>php spark db:seed</code>, sangat berguna untuk keperluan testing dan demonstrasi.</li>
+                </ul>
+
+                <h2>4. Autentikasi & Middleware (Filters)</h2>
+                <p>Keamanan sistem informasi enterprise adalah prioritas utama. Kami merancang sistem autentikasi berbasis <strong>session</strong> dan menggunakan fitur <strong>Filters</strong> CI4 sebagai middleware untuk:</p>
+                <ul>
+                    <li>Memeriksa status login sebelum mengizinkan akses ke halaman sensitif seperti dashboard admin.</li>
+                    <li>Melindungi endpoint dari serangan CSRF (Cross-Site Request Forgery) menggunakan token bawaan CI4.</li>
+                    <li>Redirect otomatis pengguna yang belum login ke halaman login.</li>
+                </ul>
+
+                <h2>5. Integrasi dengan Frontend</h2>
+                <p>Selain logika backend, kami juga mempelajari cara mengintegrasikan aset frontend (CSS, JavaScript, gambar) secara terstruktur ke dalam direktori <code>public/assets/</code> CI4. Pemisahan ini memastikan bahwa file PHP aplikasi tidak dapat diakses langsung dari web, meningkatkan keamanan secara signifikan.</p>
+
+                <p>Secara keseluruhan, mata kuliah DIS memberikan fondasi yang kuat dalam memahami cara kerja sebuah framework MVC backend modern, yang menjadi bekal penting sebelum beralih ke teknologi dan arsitektur yang lebih kompleks di semester berikutnya.</p>
+            </div>
+
+            <!-- Back Button -->
+            <div class="back-nav">
+                <a href="index.html" class="btn-secondary">
+                    <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div style="max-width: var(--max-w); margin: 0 auto;">
+            <p>&copy; 2026 <strong style="color: var(--text-main);">ACADEMIC BLOG</strong>. Dibuat oleh Boazoma, Rifqi, Raffi &amp; Ridhwan.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
