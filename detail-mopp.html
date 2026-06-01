@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOP/P - Mobile Programming Project | Academic Blog</title>
-    <meta name="description" content="Proyek kolaboratif pembuatan aplikasi mobile interaktif terintegrasi REST API backend, penyimpanan lokal, serta optimalisasi performa.">
+    <title>Create a Plan to Fill the Gap | Academic Blog</title>
+    <meta name="description"
+        content="Mengetahui gap tanpa rencana untuk menutupnya hanya menghasilkan satu hal: kecemasan yang tidak produktif.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- NAVBAR -->
@@ -41,73 +44,252 @@
 
             <!-- Post Hero -->
             <div class="post-hero">
-                <span class="post-tag">MOP/P-FSD-24 &bull; Semester 4</span>
-                <h1>Mobile Programming — Project</h1>
+                <span class="post-tag">Professional Ethics &bull; Series 3 of 4 &bull; Action Plan &bull; ~7 menit baca
+                    &bull; General &amp; IT</span>
+                <h1>Create a Plan to Fill the Gap</h1>
+                <p
+                    style="font-size: 1.15rem; color: var(--text-muted); font-style: italic; margin-top: 12px; line-height: 1.7;">
+                    Mengetahui gap tanpa rencana untuk menutupnya hanya menghasilkan satu hal: kecemasan yang tidak
+                    produktif.</p>
                 <div class="post-author-box">
                     <div class="author-avatar" style="background: linear-gradient(135deg, #8e44ad, #9b59b6);">
-                        <i class="fa-solid fa-code-branch" style="font-size:1.1rem;"></i>
+                        <i class="fa-solid fa-list-check" style="font-size:1.1rem;"></i>
                     </div>
                     <div class="author-meta">
-                        <span class="author-name">Tim Pengembang</span>
-                        <span class="post-date">Semester 4 &mdash; 2026</span>
+                        <span class="author-name">Developer Team</span>
+                        <span class="post-date">Juni 2026 &mdash; General &amp; IT</span>
                     </div>
                 </div>
             </div>
 
             <!-- Hero Banner -->
             <div class="post-main-img">
-                <div style="width:100%;height:320px;background:linear-gradient(135deg,#8e44ad 0%,#9b59b6 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;color:white;gap:16px;">
-                    <i class="fa-solid fa-code-branch" style="font-size:5rem;opacity:0.9;"></i>
-                    <h2 style="font-weight:800;font-size:1.8rem;letter-spacing:-1px;text-transform:uppercase;">Flutter App &mdash; REST API Integration</h2>
+                <div
+                    style="width:100%;height:320px;background:linear-gradient(135deg,#8e44ad 0%,#9b59b6 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;color:white;gap:16px;">
+                    <i class="fa-solid fa-list-check" style="font-size:5rem;opacity:0.85;"></i>
+                    <h2 style="font-weight:800;font-size:1.8rem;letter-spacing:-1px;text-transform:uppercase;">Action
+                        Plan &mdash; Professional Ethics</h2>
                 </div>
             </div>
 
             <!-- Post Content -->
             <div class="post-body">
-                <p>Mata kuliah <strong>Mobile Programming — Project (MOP/P)</strong> adalah puncak dari pembelajaran Mobile Programming, di mana seluruh konsep Flutter yang telah dipelajari diimplementasikan dalam sebuah proyek aplikasi mobile yang utuh dan fungsional. Kami membangun sebuah <strong>aplikasi mobile Flutter</strong> yang terhubung secara penuh dengan backend REST API.</p>
+                <p>Di blog sebelumnya, kita sudah membahas cara mengenali gap — jarak antara kompetensi yang kamu miliki
+                    sekarang dan yang dibutuhkan untuk tujuanmu. Sekarang muncul pertanyaan yang lebih menantang:
+                    <strong>apa yang akan kamu lakukan terhadap gap itu?</strong>
+                </p>
 
-                <h2>1. Arsitektur Aplikasi: State Management dengan Provider</h2>
-                <p>Untuk mengelola state aplikasi yang kompleks secara efisien, kami mengadopsi pola arsitektur <strong>MVVM (Model-View-ViewModel)</strong> dengan menggunakan package <strong>Provider</strong> sebagai solusi state management:</p>
-                <ul>
-                    <li><strong>ChangeNotifier</strong>: Kelas yang menyimpan state bisnis dan memberitahu listener ketika data berubah.</li>
-                    <li><strong>Consumer Widget</strong>: Widget yang mendengarkan perubahan dari ChangeNotifier dan merender ulang UI secara otomatis dan efisien.</li>
-                    <li><strong>MultiProvider</strong>: Menyediakan banyak state sekaligus ke seluruh pohon widget aplikasi dari titik teratas.</li>
-                </ul>
+                <p>Banyak orang berhenti di tahap diagnosis. Mereka tahu ada yang kurang, tapi tidak pernah benar-benar
+                    duduk dan merancang jalur untuk menutupnya. Akibatnya, gap tersebut tetap ada — bahkan bisa melebar
+                    — karena dunia terus bergerak sementara mereka diam.</p>
 
-                <h2>2. Integrasi REST API</h2>
-                <p>Aplikasi yang kami bangun mengonsumsi data dari sebuah REST API backend. Kami menggunakan package <strong>http</strong> dan <strong>Dio</strong> untuk menangani komunikasi jaringan:</p>
-                <ul>
-                    <li><strong>HTTP GET</strong>: Mengambil daftar data dari server dan menampilkannya dalam <code>ListView</code>.</li>
-                    <li><strong>HTTP POST/PUT</strong>: Mengirim data form (pendaftaran, login, buat konten baru) ke server menggunakan body JSON.</li>
-                    <li><strong>JWT Token Authentication</strong>: Menyimpan token autentikasi secara lokal menggunakan <strong>SharedPreferences</strong> dan mengirimkannya di setiap request yang membutuhkan autorisasi melalui HTTP header.</li>
-                    <li><strong>Error Handling</strong>: Menampilkan pesan error yang ramah pengguna ketika jaringan tidak tersedia atau server mengembalikan kode error (4xx, 5xx).</li>
-                </ul>
+                <p>Membuat rencana untuk menutup gap bukan hanya strategi karier yang baik. Dalam konteks etika
+                    profesional, ini adalah bentuk komitmen: janji kepada diri sendiri dan kepada profesimu bahwa kamu
+                    tidak akan berhenti di titik yang nyaman.</p>
 
-                <h2>3. Penyimpanan Lokal</h2>
-                <p>Kami mengimplementasikan dua mekanisme penyimpanan lokal yang berbeda sesuai kebutuhan:</p>
-                <ul>
-                    <li><strong>SharedPreferences</strong>: Untuk menyimpan data sederhana berpasangan kunci-nilai seperti token login, preferensi tema, dan data profil pengguna yang di-cache.</li>
-                    <li><strong>SQLite (via package sqflite)</strong>: Untuk menyimpan data terstruktur secara lokal, memungkinkan fitur <em>offline-first</em> di mana pengguna tetap dapat melihat konten meski tanpa koneksi internet.</li>
-                </ul>
+                <h2>Mengapa Rencana itu Perlu — Bukan Sekadar Niat</h2>
+                <p>Niat baik tidak cukup. Tanpa rencana yang konkret, "saya ingin belajar lebih banyak" akan selamanya
+                    tinggal sebagai kalimat di kepala. Rencana mengubah niat menjadi tindakan dengan memberikan
+                    struktur: apa yang akan dilakukan, kapan, dengan sumber daya apa, dan bagaimana mengukur
+                    kemajuannya.</p>
 
-                <h2>4. UI/UX Berkualitas Tinggi</h2>
-                <p>Di luar fungsionalitas, kami juga memperhatikan aspek tampilan dan pengalaman pengguna:</p>
-                <ul>
-                    <li><strong>Skeleton Loading</strong>: Menampilkan placeholder animasi saat data sedang dimuat dari API, menggantikan loading spinner yang membosankan.</li>
-                    <li><strong>Pull-to-Refresh</strong>: Memungkinkan pengguna memperbarui data dengan gestur tarik ke bawah yang sudah akrab.</li>
-                    <li><strong>Hero Animation</strong>: Animasi transisi halus antar halaman menggunakan widget <code>Hero</code> untuk elemen seperti gambar dan ikon yang berpindah layar.</li>
-                    <li><strong>Responsive Layout</strong>: Memastikan tampilan aplikasi tetap proporsional di berbagai ukuran layar menggunakan <code>LayoutBuilder</code> dan <code>MediaQuery</code>.</li>
-                </ul>
+                <blockquote
+                    style="border-left: 4px solid #9b59b6; padding: 16px 24px; margin: 28px 0; background: rgba(155,89,182,0.08); border-radius: 0 8px 8px 0; font-style: italic; color: var(--text-muted);">
+                    "Rencana yang sederhana dan dijalankan jauh lebih berharga daripada rencana yang sempurna tapi hanya
+                    ada di kepala."
+                </blockquote>
 
-                <h2>5. Testing dan Optimalisasi Performa</h2>
-                <p>Sebelum aplikasi diserahkan, kami melakukan serangkaian pengujian dan optimasi:</p>
-                <ul>
-                    <li><strong>Widget Testing</strong>: Menulis unit test untuk komponen-komponen UI kritis menggunakan package <code>flutter_test</code>.</li>
-                    <li><strong>Performance Profiling</strong>: Menggunakan Flutter DevTools untuk mengidentifikasi dan memperbaiki <em>jank</em> (frame drop) pada animasi dan scroll.</li>
-                    <li><strong>Release Build</strong>: Mengompilasi aplikasi ke mode release untuk mengukur performa nyata di perangkat fisik.</li>
-                </ul>
+                <p>Dari sudut pandang etika profesional, membuat rencana juga berarti kamu bertanggung jawab atas proses
+                    — bukan hanya hasilnya. Seorang profesional yang beretika tidak menunggu peluang datang; ia
+                    merancang kondisi agar peluang itu bisa dimanfaatkan.</p>
 
-                <p>Proyek MOP/P ini adalah salah satu pencapaian teknis paling kompleks yang kami kerjakan di Semester 4. Mengintegrasikan frontend mobile, state management, REST API, dan penyimpanan lokal dalam satu aplikasi yang kohesif merupakan pengalaman belajar yang luar biasa berharga.</p>
+                <h2>Kerangka SMART untuk Menutup Gap</h2>
+                <p>Cara paling teruji untuk membuat rencana pengembangan diri yang efektif adalah menggunakan kerangka
+                    <strong>SMART</strong> — memastikan setiap tujuan yang kamu tetapkan memenuhi lima kriteria ini:
+                </p>
+
+                <div style="display: flex; flex-direction: column; gap: 16px; margin: 28px 0;">
+                    <div
+                        style="display: flex; gap: 20px; align-items: flex-start; padding: 18px 22px; background: rgba(155,89,182,0.08); border-radius: 12px; border: 1px solid rgba(155,89,182,0.2);">
+                        <span
+                            style="font-size: 1.8rem; font-weight: 900; color: #9b59b6; line-height: 1; min-width: 36px;">S</span>
+                        <div>
+                            <strong style="display: block; margin-bottom: 4px; font-size: 1.02rem;">Specific</strong>
+                            <span style="color: var(--text-muted);">Tujuan yang jelas dan tidak ambigu. Bukan "belajar
+                                IT", tapi "kuasai dasar-dasar SQL".</span>
+                        </div>
+                    </div>
+                    <div
+                        style="display: flex; gap: 20px; align-items: flex-start; padding: 18px 22px; background: rgba(155,89,182,0.08); border-radius: 12px; border: 1px solid rgba(155,89,182,0.2);">
+                        <span
+                            style="font-size: 1.8rem; font-weight: 900; color: #9b59b6; line-height: 1; min-width: 36px;">M</span>
+                        <div>
+                            <strong style="display: block; margin-bottom: 4px; font-size: 1.02rem;">Measurable</strong>
+                            <span style="color: var(--text-muted);">Ada indikator yang bisa diukur. Bukan "lebih baik
+                                dalam presentasi", tapi "selesaikan satu sesi presentasi per bulan".</span>
+                        </div>
+                    </div>
+                    <div
+                        style="display: flex; gap: 20px; align-items: flex-start; padding: 18px 22px; background: rgba(155,89,182,0.08); border-radius: 12px; border: 1px solid rgba(155,89,182,0.2);">
+                        <span
+                            style="font-size: 1.8rem; font-weight: 900; color: #9b59b6; line-height: 1; min-width: 36px;">A</span>
+                        <div>
+                            <strong style="display: block; margin-bottom: 4px; font-size: 1.02rem;">Achievable</strong>
+                            <span style="color: var(--text-muted);">Realistis dengan sumber daya dan waktumu. Ambisius
+                                boleh, tapi tidak boleh mustahil.</span>
+                        </div>
+                    </div>
+                    <div
+                        style="display: flex; gap: 20px; align-items: flex-start; padding: 18px 22px; background: rgba(155,89,182,0.08); border-radius: 12px; border: 1px solid rgba(155,89,182,0.2);">
+                        <span
+                            style="font-size: 1.8rem; font-weight: 900; color: #9b59b6; line-height: 1; min-width: 36px;">R</span>
+                        <div>
+                            <strong style="display: block; margin-bottom: 4px; font-size: 1.02rem;">Relevant</strong>
+                            <span style="color: var(--text-muted);">Terhubung langsung dengan gap yang sudah kamu
+                                identifikasi dan tujuan kariermu.</span>
+                        </div>
+                    </div>
+                    <div
+                        style="display: flex; gap: 20px; align-items: flex-start; padding: 18px 22px; background: rgba(155,89,182,0.08); border-radius: 12px; border: 1px solid rgba(155,89,182,0.2);">
+                        <span
+                            style="font-size: 1.8rem; font-weight: 900; color: #9b59b6; line-height: 1; min-width: 36px;">T</span>
+                        <div>
+                            <strong style="display: block; margin-bottom: 4px; font-size: 1.02rem;">Time-bound</strong>
+                            <span style="color: var(--text-muted);">Ada tenggat waktu yang jelas. Tanpa deadline,
+                                rencana adalah mimpi yang selalu "nanti".</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Anatomi Rencana yang Baik: dari Gap ke Aksi</h2>
+                <p>Sebuah rencana pengembangan diri yang efektif biasanya bergerak melalui empat fase. Bukan garis lurus
+                    yang kaku, tapi kerangka yang fleksibel untuk memastikan kamu tidak hanya sibuk — tapi sibuk dengan
+                    hal yang tepat.</p>
+
+                <div
+                    style="display: flex; flex-direction: column; gap: 0; margin: 28px 0; border: 1px solid rgba(155,89,182,0.2); border-radius: 14px; overflow: hidden;">
+                    <div
+                        style="padding: 20px 24px; background: rgba(155,89,182,0.1); border-bottom: 1px solid rgba(155,89,182,0.15);">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+                            <i class="fa-solid fa-arrow-down-short-wide" style="color: #9b59b6;"></i>
+                            <strong style="color: #c39bd3;">Prioritas</strong>
+                        </div>
+                        <p style="margin: 0 0 4px 0; font-weight: 600;">Pilih gap yang paling kritis</p>
+                        <p style="margin: 0; color: var(--text-muted); font-size: 0.95rem;">Tidak semua gap perlu
+                            ditutup sekaligus. Mulai dari yang paling langsung menghalangi langkah berikutmu — bukan
+                            yang paling mudah, bukan yang paling menarik.</p>
+                    </div>
+                    <div
+                        style="padding: 20px 24px; background: rgba(155,89,182,0.07); border-bottom: 1px solid rgba(155,89,182,0.15);">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+                            <i class="fa-solid fa-book-open" style="color: #9b59b6;"></i>
+                            <strong style="color: #c39bd3;">Sumber Daya</strong>
+                        </div>
+                        <p style="margin: 0 0 4px 0; font-weight: 600;">Tentukan cara belajarmu</p>
+                        <p style="margin: 0; color: var(--text-muted); font-size: 0.95rem;">Kursus online, buku, proyek
+                            nyata, mentoring, atau komunitas? Pilih metode yang sesuai dengan gap-nya — skill teknis
+                            butuh praktik, soft skill butuh interaksi.</p>
+                    </div>
+                    <div
+                        style="padding: 20px 24px; background: rgba(155,89,182,0.1); border-bottom: 1px solid rgba(155,89,182,0.15);">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+                            <i class="fa-solid fa-calendar-days" style="color: #9b59b6;"></i>
+                            <strong style="color: #c39bd3;">Jadwal</strong>
+                        </div>
+                        <p style="margin: 0 0 4px 0; font-weight: 600;">Masukkan ke kalender, bukan to-do list</p>
+                        <p style="margin: 0; color: var(--text-muted); font-size: 0.95rem;"><em>To-do list</em> bisa
+                            diabaikan selamanya. Waktu yang sudah diblok di kalender jauh lebih sulit untuk dilewati.
+                            Konsistensi kecil setiap hari mengalahkan sesi maraton yang jarang.</p>
+                        <span
+                            style="display: inline-block; margin-top: 10px; padding: 4px 12px; background: rgba(155,89,182,0.2); border-radius: 20px; font-size: 0.82rem; color: #c39bd3;">45
+                            menit, 3x seminggu</span>
+                    </div>
+                    <div style="padding: 20px 24px; background: rgba(155,89,182,0.07);">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+                            <i class="fa-solid fa-gauge-high" style="color: #9b59b6;"></i>
+                            <strong style="color: #c39bd3;">Ukuran</strong>
+                        </div>
+                        <p style="margin: 0 0 4px 0; font-weight: 600;">Tentukan tanda bahwa gap sudah tertutup</p>
+                        <p style="margin: 0; color: var(--text-muted); font-size: 0.95rem;">Kapan kamu tahu bahwa gap
+                            ini sudah cukup tertutup? Sertifikasi yang diraih, proyek yang selesai, atau kemampuan
+                            konkret yang bisa didemonstrasikan. Tanpa ini, kamu akan belajar tanpa pernah merasa
+                            selesai.</p>
+                    </div>
+                </div>
+
+                <h2>Dua Jenis Rencana yang Perlu Kamu Miliki</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;">
+                    <div
+                        style="padding: 20px 22px; background: rgba(155,89,182,0.08); border-radius: 12px; border: 1px solid rgba(155,89,182,0.2);">
+                        <strong style="display: block; margin-bottom: 6px; color: #c39bd3;">Rencana Jangka
+                            Pendek</strong>
+                        <span
+                            style="font-size: 0.82rem; color: var(--text-muted); display: block; margin-bottom: 10px;">3–6
+                            bulan</span>
+                        <p style="margin: 0; color: var(--text-muted); font-size: 0.95rem; line-height: 1.7;">Fokus pada
+                            satu atau dua gap spesifik yang bisa ditutup relatif cepat. Konkret, taktis, dan
+                            menghasilkan kemajuan yang terasa — ini yang menjaga motivasimu tetap hidup.</p>
+                    </div>
+                    <div
+                        style="padding: 20px 22px; background: rgba(155,89,182,0.08); border-radius: 12px; border: 1px solid rgba(155,89,182,0.2);">
+                        <strong style="display: block; margin-bottom: 6px; color: #c39bd3;">Rencana Jangka
+                            Panjang</strong>
+                        <span
+                            style="font-size: 0.82rem; color: var(--text-muted); display: block; margin-bottom: 10px;">1–3
+                            tahun</span>
+                        <p style="margin: 0; color: var(--text-muted); font-size: 0.95rem; line-height: 1.7;">Gambaran
+                            besar ke mana kamu ingin berkembang. Lebih fleksibel dan bisa berubah, tapi tetap memberikan
+                            arah agar langkah-langkah kecilmu tidak acak.</p>
+                    </div>
+                </div>
+
+                <h2>Rencana yang Etis Bukan Hanya untuk Dirimu Sendiri</h2>
+                <p>Ada dimensi yang sering terlupakan: rencana pengembangan diri yang baik bukan hanya investasi untuk
+                    karier pribadi — ia adalah bentuk tanggung jawab terhadap orang-orang yang bergantung pada
+                    kompetensimu.</p>
+
+                <p>Ketika seorang dokter memperbarui pengetahuannya, pasiennya lebih aman. Ketika seorang guru terus
+                    mengembangkan pedagoginya, muridnya belajar lebih efektif. Prinsip yang sama berlaku di semua
+                    profesi: semakin kompeten kamu, semakin kecil risiko yang kamu timbulkan bagi orang lain.</p>
+
+                <p><strong>Merencanakan pertumbuhan dirimu bukan tindakan egois. Itu adalah tindakan yang paling
+                        bertanggung jawab yang bisa kamu lakukan sebagai seorang profesional.</strong></p>
+
+                <div
+                    style="margin: 32px 0; padding: 24px 28px; background: #1e1030; border-radius: 14px; border: 1px solid #5b2d8e;">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+                        <i class="fa-solid fa-laptop-code" style="color: #c39bd3; font-size: 1.2rem;"></i>
+                        <strong
+                            style="color: #c39bd3; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;">Khusus
+                            untuk kamu, mahasiswa IT</strong>
+                    </div>
+                    <p style="margin: 0 0 12px 0; font-weight: 700; font-size: 1.05rem; color: #e8d5f5;">Perspektif IT
+                    </p>
+                    <p style="margin: 0; color: #d7b8f5; line-height: 1.8;">Di dunia IT, rencana pengembangan diri punya
+                        konteks yang unik: <em>landscape</em>-nya bergerak sangat cepat sehingga rencana tiga tahun pun
+                        bisa usang di tengah jalan. Ini bukan alasan untuk tidak merencanakan — justru sebaliknya, kamu
+                        perlu lebih terstruktur agar tidak hanyut terbawa <em>hype</em> semata.</p>
+                    <p style="margin: 12px 0 0 0; color: #d7b8f5; line-height: 1.8;">Saran konkret: buat rencana
+                        berbasis <em>milestone</em>, bukan hanya berbasis waktu. Misalnya, "sebelum lulus, saya akan
+                        memiliki dua proyek portofolio yang bisa dijelaskan secara teknis di depan <em>interviewer</em>"
+                        — itu lebih bermakna daripada "belajar <em>coding</em> selama enam bulan". Kombinasikan <em>hard
+                            skills</em> (bahasa pemrograman, <em>framework</em>, <em>tools</em>) dengan <em>soft
+                            skills</em> (dokumentasi, estimasi waktu, komunikasi teknis ke non-teknis) karena dunia
+                        kerja IT membutuhkan keduanya.</p>
+                    <p style="margin: 12px 0 0 0; color: #d7b8f5; line-height: 1.8;">Dan yang paling penting dari sudut
+                        pandang etis: rencanakan juga literasi keamanan dan privasi sejak dini. Seorang developer yang
+                        tidak punya rencana untuk memahami <em>secure coding practices</em> adalah seseorang yang —
+                        tanpa sadar — sedang merencanakan untuk membuat sistem yang tidak aman bagi penggunanya.</p>
+                </div>
+
+                <h2>Mulai Kecil, Mulai Sekarang</h2>
+                <p>Kesalahan terbesar dalam membuat rencana pengembangan diri adalah menunggu kondisi sempurna: menunggu
+                    semester baru, menunggu liburan, menunggu ada lebih banyak waktu. Kondisi itu tidak pernah datang
+                    dengan sendirinya.</p>
+
+                <p>Mulailah dengan satu langkah konkret yang bisa dilakukan minggu ini. Satu kursus yang didaftarkan,
+                    satu buku yang dibuka, satu koneksi yang dibangun. <strong>Rencana yang dieksekusi 70% jauh lebih
+                        berharga daripada rencana sempurna yang tidak pernah dimulai.</strong></p>
             </div>
 
             <!-- Back Button -->
@@ -123,9 +305,11 @@
     <!-- FOOTER -->
     <footer>
         <div style="max-width: var(--max-w); margin: 0 auto;">
-            <p>&copy; 2026 <strong style="color: var(--text-main);">ACADEMIC BLOG</strong>. Dibuat oleh Boazoma, Rifqi, Raffi &amp; Ridhwan.</p>
+            <p>&copy; 2026 <strong style="color: var(--text-main);">ACADEMIC BLOG</strong>. Dibuat oleh Boazoma, Rifqi,
+                Raffi &amp; Ridhwan.</p>
         </div>
     </footer>
 
 </body>
+
 </html>
